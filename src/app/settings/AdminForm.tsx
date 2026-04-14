@@ -5,7 +5,7 @@ import { createUser } from "@/actions/users";
 import styles from "../archive/new/new.module.css";
 
 export default function AdminForm() {
-  const [state, formAction, isPending] = useActionState(createUser, { error: null, success: false });
+  const [state, formAction, isPending] = useActionState(createUser, { error: "" });
   const formRef = useRef<HTMLFormElement>(null);
 
   useEffect(() => {

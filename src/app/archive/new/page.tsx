@@ -7,7 +7,7 @@ import styles from "./new.module.css";
 import { useState } from "react";
 
 export default function NewArchivePage() {
-  const [state, formAction, isPending] = useActionState(createArchiveRecord, { error: null });
+  const [state, formAction, isPending] = useActionState(createArchiveRecord, { error: "" });
   const [imageCount, setImageCount] = useState(0);
   const [docCount, setDocCount] = useState(0);
 

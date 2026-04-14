@@ -12,7 +12,7 @@ interface ExtendedRecord extends ArchiveRecord {
 
 export default function EditForm({ record }: { record: ExtendedRecord }) {
   const updateWithId = updateArchiveRecord.bind(null, record.id);
-  const [state, formAction, isPending] = useActionState(updateWithId, { error: null });
+  const [state, formAction, isPending] = useActionState(updateWithId, { error: "" });
   const [imageCount, setImageCount] = useState(0);
   const [docCount, setDocCount] = useState(0);
 

@@ -7,7 +7,7 @@ import styles from "../archive/new/new.module.css";
 
 export default function ProfilePage() {
   const { data: session } = useSession();
-  const [state, formAction, isPending] = useActionState(changeOwnPassword, { error: null });
+  const [state, formAction, isPending] = useActionState(changeOwnPassword, { error: "" });
 
   return (
     <div className={styles.container}>

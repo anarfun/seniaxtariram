@@ -83,7 +83,7 @@ export default function UserList({ initialUsers, currentUserId }: { initialUsers
 
 function EditUserForm({ user, onCancel }: { user: User, onCancel: () => void }) {
   const updateWithId = updateUser.bind(null, user.id);
-  const [state, formAction, isPending] = useActionState(updateWithId, { error: null, success: false });
+  const [state, formAction, isPending] = useActionState(updateWithId, { error: "" });
 
   // Fix: use useEffect to avoid setState-in-render error
   useEffect(() => {
